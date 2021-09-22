@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<phpunit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation="./phpunit/phpunit-9.5.9.phar"
+         bootstrap="vendor/autoload.php"
+         colors="true">
+    <testsuites>
+        <testsuite name="Unit">
+            <directory suffix="Test.php">./App/Test</directory>
+        </testsuite>
+        <testsuite name="Feature">
+            <directory suffix="Test.php">./App/Test</directory>
+        </testsuite>
+    </testsuites>
+    <coverage processUncoveredFiles="true">
+        <include>
+            <directory suffix=".php">./App/Model</directory>
+            <directory suffix=".php">./App/Controller</directory>
+            <directory suffix=".php">./App/Db</directory>
+        </include>
+    </coverage>
+
+</phpunit>
